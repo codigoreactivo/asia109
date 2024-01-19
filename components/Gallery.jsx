@@ -13,6 +13,23 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 export default function App() {
+  const imagePaths = [
+    "/img/dunasasia/1.jpg",
+    "/img/dunasasia/7.jpg",
+    "/img/dunasasia/9.jpg",
+    "/img/dunasasia/10.jpg",
+    "/img/dunasasia/11.jpg",
+    "/img/dunasasia/12.jpg",
+    "/img/dunasasia/13.jpg",
+    "/img/dunasasia/14.jpg",
+    "/img/dunasasia/16.jpg",
+    "/img/dunasasia/17.jpg",
+    "/img/dunasasia/18.jpg",
+    "/img/dunasasia/19.jpg",
+    "/img/dunasasia/20.jpg",
+    "/img/dunasasia/21.jpg",
+    "/img/dunasasia/24.jpg",
+    ];
   return (
     <>
       <Swiper
@@ -43,26 +60,13 @@ export default function App() {
           },
         }}
         modules={[Autoplay,Navigation, Pagination, Scrollbar, A11y]}
-        className="mySwiper"
+        className="mySwiper h-[42vh] cursor-grab"
       >
-        <SwiperSlide>
-          <Image src="/img/slider/11s.jpeg" width={616} height={410}></Image>
+        {imagePaths.map((imagePath, index) => (
+        <SwiperSlide  key={index}>
+          <Image className=" rounded-xl" src={imagePath} width={616} height={410} />
         </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/img/slider/12s.jpeg" width={616} height={410}></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/img/slider/13s.jpeg" width={616} height={410}></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/img/slider/14s.jpeg" width={616} height={410}></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/img/slider/15s.jpeg" width={616} height={410}></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/img/slider/16s.jpeg" width={616} height={410}></Image>
-        </SwiperSlide>
+      ))}
       </Swiper>
     </>
   );

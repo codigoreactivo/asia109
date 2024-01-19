@@ -30,47 +30,7 @@ const Formulario = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
-    // Obtén todos los campos del formulario
-    const formData = new FormData(form.current);
-    const formObject = {};
-    formData.forEach((value, key) => {
-      formObject[key] = value;
-    });
-  
-    // Datos para enviar al webhook
-    const webhookData = {
-      pageTitle: pageTitle,
-      phoneNumber: phoneNumber,
-      // Campos específicos del formulario
-      docType: formObject.docType,
-      from_name: formObject.from_name,
-      email: formObject.email,
-      numDoc: formObject.numDoc,
-      payMethod: formObject.payMethod,
-      payTime: formObject.payTime,
-      // Agrega más campos según sea necesario
-      // Ejemplo: campoNuevo: formObject.campoNuevo,
-    };
-  
-    // Realiza la solicitud al webhook
-    fetch("https://io.manya.pe/webhook-test/landing-tu-habitat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(webhookData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Webhook response:", data);
-        // Puedes realizar acciones adicionales según la respuesta del webhook
-      })
-      .catch((error) => {
-        console.error("Error al llamar al webhook:", error);
-      });
-  
-    // Envía el formulario por correo electrónico
+
     emailjs
       .sendForm(
         "service_efzgheu",
@@ -81,17 +41,15 @@ const Formulario = () => {
       .then(
         (result) => {
           console.log(result.text);
-          console.log("Solicitud Enviada");
-  
+          console.log("Solicitus Enviada");
           e.target.reset();
-          
+          window.location.href = "https://tuhabitatinmobiliaria.com/gracias-asia";
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
-  
 
   return (
     <form

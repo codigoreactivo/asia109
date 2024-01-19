@@ -5,6 +5,7 @@ import Wa from "@/components/Wa";
 import Gallery from "@/components/Gallery";
 import Image from "next/image";
 import Link from "next/link";
+import Faq from "@/components/Faq";
 
 const page = () => {
   return (
@@ -12,12 +13,17 @@ const page = () => {
       <section
         className="flex custom-overlay  w-[full] flex-col justify-center xl:h-screen h-auto  bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('img/hero/h-asia109.jpg')",
+          backgroundImage: "url('img/dunasasia/1.jpg')",
         }}
       >
         <div className="w-full  z-10 gap-8 flexflex-col justify-between lg:px-24">
-          <div className="flex justify-between lg:flex-row flex-col">
-            <div className=" flex text-white flex-col justify-center lg:gap-6 ">
+          <div className="flex justify-between lg:flex-row flex-col flex-wrap">
+            <div className=" lg:w-full  h-20 lg:mb-[8vh] mb-5 lg:mt-[-6vh]">
+              <div className="lg:mb-2 lg:mt-4 justify-center flex">
+                <Image src="/img/logo-nobg.png" width={300} height={80}></Image>
+              </div>
+            </div>
+            <div className=" flex text-white flex-col justify-center lg:gap-6 my-6 w-full lg:w-[50%]">
               <div className="justify-start items-start flex flex-col mx-4 lg:mx-0 lg:gap-1 gap-3">
                 <div className="flex justify-start items-center lg:mb-[1rem] gap-2 mt-2 lg:mt-0">
                   <div>
@@ -29,83 +35,71 @@ const page = () => {
                     ></Image>
                   </div>
                   <span>
-                    <span className=" font-bold"> Ubicacion : </span>KM 109 de
-                    la Panamericana Sur en el distrito de Asia.
+                    <span className=" font-bold"> Ubicación : </span>KM 109 de
+                    la Panamericana Sur en el distrito de Asia
                   </span>
                 </div>
                 <div className="flex flex-col lg:gap-3">
-                  <h1 className=" text-[2rem] leading-none my-3 lg:my-0 lg:text-5xl  text-white ">
-                    Condominio Residencial de Playa
-                    <span className=" font-black"> <br className=" hidden lg:block" />Asia 109</span>{" "}
+                  <h1 className=" text-[2rem] leading-none pb-6 lg:my-0 lg:text-7xl  text-white ">
+                    Condominio Residencial <br className=" hidden lg:block" />{" "}
+                    <span className=" font-black"> Dunas de Asia</span>
                   </h1>
                   <h2 className=" lg:text-[2rem] text-[1rem] font-light leading-none">
-                    Malecón de<br className="hidden lg:block" />
-                    <span className=" font-bold"> 200 metros </span>lineale
+                    5 kilómetros de Playa Sarapampa,
+                    <span className=" font-bold"> totalmente privado</span>
                   </h2>
                   <p className=" lg:text-xl">
                     Lotes de playa de alta rentabilidad, desde:
                   </p>
-                  <span className=" lg:text-6xl text-[2.2rem] font-black">
-                    USD $60,000
+                  <span className=" lg:text-[3rem] text-[2.2rem] font-black">
+                    USD $50,000
                   </span>
-                  <p className=" text-sm">
-                    Consulta por nuestros descuentos especiales en pagos al
-                    contado.
-                  </p>
-                  
-                </div>
-                <div>
-                  <p className=" lg:text-xl">
-                    ¡Asegura tu lugar junto al mar ahora!
-                  </p>
-                  <button className=" bg-[#15AF3A] h-[55px] px-[5px] lg:px-[25px] lg:text-xl rounded-[8px] my-4">
-                    <Link href="#form">
-                      Separa tu lote por solo{" "}
-                      <span className=" font-black">USD $500 dólares</span>{" "}
-                    </Link>
-                  </button>
-                  <p className=" text-xl">
-                    Con partida<span className=" font-extrabold"> N°21261906</span> 
-                  </p>
                 </div>
               </div>
             </div>
             <div
               id="form-p"
-              className="flex flex-col basis-[50%] lg:px-4 justify-center"
+              className="flex flex-col w-full lg:w-[50%] lg:px-4 justify-center"
             >
               <Form />
             </div>
           </div>
         </div>
       </section>
-      <section className=" lg:h-[screen] h-auto flex xl:flex-row flex-col justify-center">
+      <section className=" lg:h-[screen] h-auto flex xl:flex-row flex-col justify-center px-4 lg:px-0">
         <div className="flex flex-col justify-center gap-8">
           <div className="lg:w-[1140px]">
             <div className="flex lg:flex-row flex-col justify-between items-center w-auto  my-6 ">
-              <h2 className=" text-3xl">
-                Conoce mas del<span className=" font-bold"> Proyecto</span>
+              <h2 className=" text-4xl">
+                Conoce más del<span className=" font-bold"> Proyecto</span>
               </h2>
               <div>
                 <Image
-                  src="/img/LOGO-ASIA109-r.png"
-                  className="bg-[#B9F6F7] text-[#15AF3A] flex  p-1 rounded-full"
-                  width={60}
+                  src="/img/logodunas.png"
+                  className=" text-[#15AF3A] flex  p-1 "
+                  width={100}
                   height={60}
                 ></Image>
               </div>
             </div>
+            <p className=" my-4 text-lg">
+              Dunas de Asia es la oportunidad para que tú y tu familia disfruten
+              de vivir en un proyecto cercano al mar. La oportunidad de
+              construir hasta 5 pisos te abrirá un mundo de posibilidades, desde
+              lujosas viviendas unifamiliares hasta exclusivos departamentos de
+              inversión con vista al mar.
+            </p>
             <iframe
-              src="https://www.youtube.com/embed/V2aUnFMf_Fo?autoplay=1&mute=1&loop=1&playlist=V2aUnFMf_Fo"
+              src="https://www.youtube.com/embed/U5DEAVNG0uM?autoplay=1&mute=1&loop=1&playlist=U5DEAVNG0uM"
               width="560"
               height="315"
-              className="responsive-iframe"
+              className="responsive-iframe rounded-xl"
               title="Poseidón Primer número cel"
               frameborder="0"
               allow="fullscreen;"
             ></iframe>
             <div className="flex flex-row gap-4 justify-center my-6 text-white">
-              <button className=" bg-[#15AF3A] h-[55px] p-[15px] rounded=[8px]">
+              <button className=" bg-[#15AF3A] h-[55px] p-[15px] rounded-[8px]">
                 <Link href="#form">
                   Separa tu lote por solo{" "}
                   <span className=" font-black">USD $500 dólares</span>{" "}
@@ -115,22 +109,38 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className=" xl:h-[70vh] h-auto flex flex-col justify-center items-center">
+      <section className=" w-full h-auto bg-[#058FC7] text-white mt-12 ">
+        <div className=" lg:max-w-[1140px] m-auto flex flex-col py-8 items-center">
+          <div className="flex flex-col items-center">
+            <h2 className=" text-4xl m-2 font-bold">¿Quiénes somos?</h2>
+            <p className=" text-center lg:text-[1.1rem] mx-4">
+              Somos una empresa en rubro de desarrollo y comercialización de
+              proyectos inmobiliarios de gran trayectoria con más de 4 años de
+              experiencia en Venta de lotes exclusivos con vista al mar en Lima
+              Sur.
+            </p>
+          </div>
+          <div className=" mt-12">
+            <Image src="/img/logo-nobg.png" width={300} height={80}></Image>
+          </div>
+        </div>
+      </section>
+      <section className=" xl:h-[70vh] h-auto flex flex-col justify-center items-center px-4 lg:px-0">
         <div className="flex lg:flex-row flex-col justify-between items-center w-full lg:w-[1290px] my-12 px-2">
-          <h2 className=" text-3xl">
-            Caracteristicas del<span className=" font-bold"> Proyecto</span>
+          <h2 className=" text-3xl py-4 lg:py-0">
+            Características del<span className=" font-bold "> Proyecto</span>
           </h2>
           <div className="flex flex-row justify-start items-start gap-10">
             <div>
               <span className=" uppercase">
-                <span className=" font-extrabold text-2xl">42 lotes M2</span>
-                <br className=" hidden lg:block" /> desde 161 M2 a mas
+                <span className=" font-extrabold text-2xl">31 lotes M2</span>
+                <br className=" hidden lg:block" /> desde 150 M2 a más
               </span>
             </div>
             <div>
               <span className=" uppercase">
-                <span className=" font-extrabold text-2xl">77 Estac.</span>
-                <br className=" hidden lg:block" /> DE 12.50 M2
+                <span className=" font-extrabold text-2xl">63 Estac.</span>
+                <br className=" hidden lg:block" /> DE 16.50 M2
               </span>
             </div>
           </div>
@@ -163,10 +173,10 @@ const page = () => {
               <p>Entrega Inmediata</p>
             </div>
             <div className="flex gap-2 items-center text-[14px]">
-              <div className="">
+              <div className="bg-[#B9F6F7] rounded-full">
                 <Image
                   src="/icons/atrib/portico.svg"
-                  className="bg-[#B9F6F7] text-[#15AF3A] flex  p-4 rounded-full"
+                  className=" text-[#15AF3A] flex  p-4 "
                   width={60}
                   height={80}
                 ></Image>
@@ -239,20 +249,7 @@ const page = () => {
               </div>
               <p>Cerco Perimétrico</p>
             </div>
-            <div className="flex gap-2 items-center text-[14px]">
-              <div className="">
-                <Image
-                  src="/icons/atrib/green.svg"
-                  className="bg-[#B9F6F7] text-[#15AF3A] flex  p-4 rounded-full"
-                  width={60}
-                  height={80}
-                ></Image>
-              </div>
-              <p>
-                Áreas Verdes,
-                <br className=" hidden lg:block" /> veredas y sardineles
-              </p>
-            </div>
+
             <div className="flex gap-2 items-center text-[14px]">
               <div className="">
                 <Image
@@ -262,7 +259,7 @@ const page = () => {
                   height={80}
                 ></Image>
               </div>
-              <p>Frente al Mar</p>
+              <p>Vista al Mar</p>
             </div>
             <div className="flex gap-2 items-center text-[15px]">
               <div className="">
@@ -275,7 +272,7 @@ const page = () => {
               </div>
               <p>
                 Lotes con área <br className=" hidden lg:block" />
-                desde 120 M2
+                desde 150 M2
               </p>
             </div>
             <div className="flex gap-2 items-center text-[14px]">
@@ -287,12 +284,12 @@ const page = () => {
                   height={80}
                 ></Image>
               </div>
-              <p>Camino Afirmados</p>
+              <p>Camino Asfaltado</p>
             </div>
           </div>
         </div>
       </section>
-      <section className="xl:m-auto xl:h-[80vh] h-auto">
+      <section className="xl:m-auto h-auto">
         <Maps />
       </section>
       <section className="w-full h-auto flex flex-col justify-center items-center mt-24 bg-[#058FC7] text-white">
@@ -300,9 +297,10 @@ const page = () => {
           <h2 className="mx-4 font-semibold lg:mx-0 text-4xl my-2">
             A un paso de:
           </h2>
-          <div className=" grid lg:grid-cols-2 gap-4 mx-4 lg:mx-0">
+          <div className=" grid lg:grid-cols-2 gap-4 mx-4 lg:mx-0 ">
             <div className="">
               <Image
+                className="rounded-xl"
                 data-aos="fade-up"
                 src="/img/basia.jpg"
                 width={629}
@@ -314,11 +312,12 @@ const page = () => {
               <p className=" my-1">
                 Disfruta de los diferentes puntos de diversión que ofrece el
                 Boulevard, ubicado a 20 min de nuestro condominio, rodeado de
-                centros comerciales y centros de entretenimiento
+                centros comerciales y centros de entretenimiento.
               </p>
             </div>
             <div>
               <Image
+                className="rounded-xl"
                 data-aos="fade-up"
                 src="/img/playas.jpg"
                 width={629}
@@ -327,12 +326,13 @@ const page = () => {
               <h3 className=" text-xl font-extrabold my-2">HERMOSAS PLAYAS</h3>
               <p className=" my-1">
                 A unos minutos de balnearios y lindas playas como: Playa Cocoa,
-                Playa Gaviotas, Playa la Totoritas, Los Cocos, Las Palmas,
+                Playa Gaviotas, Playa las Totoritas, Los Cocos, Las Palmas,
                 Valdivia, entre otras.
               </p>
             </div>
             <div>
               <Image
+                className="rounded-xl"
                 data-aos="fade-up"
                 src="/img/dunas.jpg"
                 width={629}
@@ -346,6 +346,7 @@ const page = () => {
             </div>
             <div>
               <Image
+                className="rounded-xl"
                 data-aos="fade-up"
                 src="/img/lomas.jpg"
                 width={629}
@@ -360,25 +361,40 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className=" w-auto h-[70vh] flex flex-col justify-center">
-      <div className=" flex justify-center">
-          <h2 className=" text-2xl font-extrabold my-6">
-            Explora mas el proyecto
+      <section className=" w-auto h-[85vh] flex flex-col justify-center my-4">
+        <div className=" flex justify-center">
+          <h2 className=" text-4xl font-extrabold my-6">
+            Explora más el proyecto
           </h2>
         </div>
         <div>
           <Gallery />
         </div>
         <div className="flex flex-row gap-4 justify-center my-6 text-white">
-          <button className=" bg-[#15AF3A] h-[55px] p-[15px] rounded=[8px]">
+          <button className=" bg-[#15AF3A] h-[55px] p-[15px] rounded-[8px]">
             <Link href="#form">
-              Separa tu lote por solo{" "}
-              <span className=" font-black">USD $500 dólares</span>{" "}
+              Separa tu lote por solo
+              <span className=" font-black "> USD $500 dólares</span>
             </Link>
           </button>
         </div>
       </section>
-      <Wa />
+      <section className=" my-10">
+        <div className=" w-full lg:w-6/12 m-auto px-6 lg:px-0  ">
+          <h2 className=" text-center text-4xl my-6 font-bold">
+            Preguntas Frecuentes
+          </h2>
+          <Faq />
+          <div className="flex flex-row gap-4 justify-center my-20  text-white">
+            <button className=" bg-[#15AF3A] h-[55px] p-[15px] rounded-[8px]">
+              <Link href="#form">
+                Separa tu lote por solo
+                <span className=" font-black "> USD $500 dólares</span>
+              </Link>
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
